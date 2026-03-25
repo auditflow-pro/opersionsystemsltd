@@ -9,40 +9,29 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo.svg" alt="Operion Systems Logo">
-      <h1>Operion Systems Ltd</h1>
-    </div>
+    <img src="logo.svg" alt="Operion Systems Logo" class="logo">
     <nav>
-      <a href="demo.html" class="request-demo">Request Demo</a>
+      <button id="openDemoForm">Request Demo</button>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h2>Deterministic AI Orchestrated Operations</h2>
-      <p>Automate, orchestrate, and audit your operations with confidence.</p>
+      <h1>Deterministic AI Orchestrated Operations</h1>
+      <p>Operion: Streamline enquiries, automate workflows, and stay in control.</p>
     </section>
 
-    <section class="features">
-      <div class="feature">
-        <h3>Core System</h3>
-        <p>Deterministic pipelines, structured inputs, auditable outputs.</p>
-      </div>
-      <div class="feature">
-        <h3>HIVE Integration</h3>
-        <p>Multi-tenant orchestration, secure modular architecture.</p>
-      </div>
-      <div class="feature">
-        <h3>Guardian Layer</h3>
-        <p>Protect against external threats, maintain operational integrity.</p>
-      </div>
+    <section id="demoSection" class="demo-section hidden">
+      <h2>Request a Demo</h2>
+      <form id="requestDemoForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="details" placeholder="Brief Description" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formStatus"></p>
     </section>
   </main>
-
-  <footer>
-    <p>© 2026 Operion Systems Ltd. All rights reserved.</p>
-  </footer>
 
   <script src="app.js"></script>
 </body>
