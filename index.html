@@ -1,28 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operion Systems Ltd</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operion Systems Ltd</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="favicon.svg" alt="Operion Logo" class="logo-img">
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">
+      <img src="logo.svg" alt="Operion Systems Logo" class="nav-logo-mark">
+      Operion Systems
+    </a>
+    <div class="nav-links">
+      <a href="#about" class="active">About</a>
+      <a href="demo.html">Demo</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="nav-burger">&#9776;</button>
+  </nav>
+
+  <!-- HERO / INTRO -->
+  <section id="about" class="section">
+    <div class="container">
+      <h1 class="display-1">Operion Systems Ltd</h1>
+      <p class="text-dim">Deterministic, AI-orchestrated operations system. Precision-engineered for modular pipelines and industrial intelligence.</p>
+    </div>
+  </section>
+
+  <!-- DEMO SECTION -->
+  <section id="demo-section" class="section">
+    <div class="container">
+      <h2 class="display-2 text-cyan">Try the Operion Pipeline Demo</h2>
+      <form id="demo-form" class="form-group">
+        <label class="form-label" for="demo-input">Enter input data:</label>
+        <input type="text" id="demo-input" class="form-input" placeholder="Type your request..." required>
+        <button type="submit" class="btn btn-primary btn-lg">Submit Demo</button>
+        <p class="form-hint" id="demo-hint">Demo executes the Operion pipeline with deterministic output.</p>
+      </form>
+      <div id="demo-output" class="terminal" style="margin-top:20px; display:none;">
+        <div class="terminal-bar">
+          <span class="terminal-dot terminal-dot-red"></span>
+          <span class="terminal-dot terminal-dot-amber"></span>
+          <span class="terminal-dot terminal-dot-green"></span>
+          <span class="terminal-title">Operion Demo</span>
         </div>
-        <nav>
-            <ul>
-                <li><a href="demo.html">Request Demo</a></li>
-            </ul>
-        </nav>
-    </header>
+        <pre id="demo-result" class="t-output"></pre>
+      </div>
+    </div>
+  </section>
 
-    <main id="main-content">
-        <!-- canonical main content preserved -->
-    </main>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.svg" alt="Operion Systems Logo" width="32">
+        <p>Operion Systems Ltd — Industrial AI orchestration with dark technical precision.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Operion Systems Ltd. All rights reserved.</p>
+      <div class="footer-legal-links">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+    </div>
+  </footer>
 
-    <script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
