@@ -1,28 +1,15 @@
-// Operion Systems Ltd — app.js
-document.addEventListener("DOMContentLoaded", () => {
-  // Mobile burger toggle
-  const burger = document.querySelector(".nav-burger");
-  const links = document.querySelector(".nav-links");
+// Navigation burger toggle
+const burger = document.querySelector('.nav-burger');
+const navLinks = document.querySelector('.nav-links');
+burger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-  burger.addEventListener("click", () => {
-    links.classList.toggle("open");
-  });
+// Demo form submission
+const demoForm = document.getElementById('demo-form');
+const demoSuccess = document.getElementById('demo-success');
 
-  // Smooth scroll for nav links
-  document.querySelectorAll(".nav-links a").forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-      if (this.hash) {
-        e.preventDefault();
-        document.querySelector(this.hash).scrollIntoView({ behavior: "smooth" });
-        links.classList.remove("open");
-      }
-    });
-  });
-
-  // Form submit placeholder
-  const form = document.querySelector("form");
-  form?.addEventListener("submit", e => {
-    e.preventDefault();
-    alert("Message sent! (demo placeholder)");
-  });
+demoForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  // Placeholder: connect to Operion pipeline here
+  demoSuccess.style.display = 'block';
+  demoForm.reset();
 });
