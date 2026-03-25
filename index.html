@@ -3,67 +3,129 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operion Systems Ltd</title>
-  <link rel="icon" href="logo.svg" type="image/svg+xml">
+
+  <title>Operion Systems — AI-Powered Enquiry Handling</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Operion handles customer enquiries automatically — in your voice, 24/7. From £79/month.">
+  <meta name="robots" content="index, follow">
+
+  <!-- FAVICON (FIXED) -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <!-- NAVIGATION -->
-  <nav class="nav">
-    <div class="nav-logo">
-      <div class="nav-logo-mark">
-        <img src="logo.svg" alt="Operion Systems Logo" width="28" height="28">
-      </div>
-      Operion Systems
-    </div>
-    <div class="nav-links">
-      <a href="#demo" class="active">Demo</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
-    <button class="nav-burger">&#9776;</button>
-  </nav>
 
-  <!-- HERO -->
-  <section class="section" id="hero">
-    <div class="container">
-      <h1 class="display-1">Operion Systems Ltd</h1>
-      <p class="text-dim">Deterministic AI operations for secure, auditable, and precise workflows.</p>
-      <a href="#demo" class="btn btn-primary">Request Demo</a>
-    </div>
-  </section>
+<!-- ── NAV ───────────────────────────────────────── -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <!-- ✅ FIX: data-logo hook for JS -->
+    <img src="/logo.svg" data-logo alt="Operion">
+    OPERION
+  </a>
 
-  <!-- DEMO FORM -->
-  <section class="section" id="demo">
-    <div class="container container-narrow">
-      <h2 class="display-2">Request a Demo</h2>
-      <form id="demo-form">
-        <div class="form-group">
-          <label class="form-label" for="name">Full Name</label>
-          <input class="form-input" type="text" id="name" placeholder="John Doe" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input class="form-input" type="email" id="email" placeholder="email@example.com" required>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="company">Company</label>
-          <input class="form-input" type="text" id="company" placeholder="Acme Ltd">
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
-        <p class="form-hint" id="demo-success" style="display:none;">Your demo request has been submitted!</p>
-      </form>
-    </div>
-  </section>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="how-it-works.html">How It Works</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="demo.html">Demo</a>
+  </div>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <div class="container container-narrow">
-      <h2 class="display-2">About Operion</h2>
-      <p class="text-dim">Operion is a deterministic, AI-orchestrated operations system designed to receive inputs, process them through structured logic, and produce controlled, auditable outputs.</p>
-    </div>
-  </section>
+  <div class="nav-cta">
+    <a href="dashboard.html" class="btn btn-ghost btn-sm">Login</a>
+    <a href="get-started.html" class="btn btn-primary btn-sm">Start</a>
+  </div>
 
-  <script src="app.js"></script>
+  <button class="nav-burger">☰</button>
+</nav>
+
+<!-- ── HERO ─────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+
+    <h1 class="display-1">
+      Customer enquiries.<br>
+      <em>Handled.</em>
+    </h1>
+
+    <p class="hero-sub">
+      AI that replies to your customers instantly, in your voice, from your email.
+    </p>
+
+    <div class="hero-actions">
+      <a href="get-started.html" class="btn btn-primary">Start Free Trial</a>
+      <a href="demo.html" class="btn btn-ghost">Try Demo</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TICKER (THIS WAS MISSING HOOK) ───────────── -->
+<div class="ticker-wrap">
+  <!-- ✅ REQUIRED for JS -->
+  <div class="ticker-inner"></div>
+</div>
+
+<!-- ── STATS (JS COUNTERS HOOKED) ──────────────── -->
+<section class="section-sm">
+  <div class="container grid-4">
+
+    <div>
+      <div data-count="15">0</div>
+      <div>Enquiry Types</div>
+    </div>
+
+    <div>
+      <div data-count="4">0</div>
+      <div>AI Layers</div>
+    </div>
+
+    <div>
+      <div data-count="24">0</div>
+      <div>Always On</div>
+    </div>
+
+    <div>
+      <div data-count="100" data-suffix="%">0</div>
+      <div>Coverage</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── CTA ─────────────────────────────────────── -->
+<section class="section">
+  <div class="container" style="text-align:center">
+
+    <h2>Ready to automate your enquiries?</h2>
+
+    <a href="get-started.html" class="btn btn-primary btn-lg">
+      Get Started
+    </a>
+
+  </div>
+</section>
+
+<!-- ── FOOTER ─────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2025 Operion Systems Ltd</p>
+  </div>
+</footer>
+
+<!-- STRIPE -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- APP -->
+<script src="app.js"></script>
+
 </body>
 </html>
