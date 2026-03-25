@@ -3,129 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Operion Systems — AI-Powered Enquiry Handling</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Operion handles customer enquiries automatically — in your voice, 24/7. From £79/month.">
-  <meta name="robots" content="index, follow">
-
-  <!-- FAVICON (FIXED) -->
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
-  <!-- FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
+  <title>Operion Systems Ltd</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- ── NAV ───────────────────────────────────────── -->
-<nav class="nav">
-  <a href="index.html" class="nav-logo">
-    <!-- ✅ FIX: data-logo hook for JS -->
-    <img src="/logo.svg" data-logo alt="Operion">
-    OPERION
-  </a>
-
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="how-it-works.html">How It Works</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="demo.html">Demo</a>
-  </div>
-
-  <div class="nav-cta">
-    <a href="dashboard.html" class="btn btn-ghost btn-sm">Login</a>
-    <a href="get-started.html" class="btn btn-primary btn-sm">Start</a>
-  </div>
-
-  <button class="nav-burger">☰</button>
-</nav>
-
-<!-- ── HERO ─────────────────────────────────────── -->
-<section class="hero">
-  <div class="container">
-
-    <h1 class="display-1">
-      Customer enquiries.<br>
-      <em>Handled.</em>
-    </h1>
-
-    <p class="hero-sub">
-      AI that replies to your customers instantly, in your voice, from your email.
-    </p>
-
-    <div class="hero-actions">
-      <a href="get-started.html" class="btn btn-primary">Start Free Trial</a>
-      <a href="demo.html" class="btn btn-ghost">Try Demo</a>
+  <header>
+    <div class="logo">
+      <img src="logo.svg" alt="Operion Systems Logo">
+      <h1>Operion Systems Ltd</h1>
     </div>
+    <nav>
+      <a href="demo.html" class="request-demo">Request Demo</a>
+    </nav>
+  </header>
 
-  </div>
-</section>
+  <main>
+    <section class="hero">
+      <h2>Deterministic AI Orchestrated Operations</h2>
+      <p>Automate, orchestrate, and audit your operations with confidence.</p>
+    </section>
 
-<!-- ── TICKER (THIS WAS MISSING HOOK) ───────────── -->
-<div class="ticker-wrap">
-  <!-- ✅ REQUIRED for JS -->
-  <div class="ticker-inner"></div>
-</div>
+    <section class="features">
+      <div class="feature">
+        <h3>Core System</h3>
+        <p>Deterministic pipelines, structured inputs, auditable outputs.</p>
+      </div>
+      <div class="feature">
+        <h3>HIVE Integration</h3>
+        <p>Multi-tenant orchestration, secure modular architecture.</p>
+      </div>
+      <div class="feature">
+        <h3>Guardian Layer</h3>
+        <p>Protect against external threats, maintain operational integrity.</p>
+      </div>
+    </section>
+  </main>
 
-<!-- ── STATS (JS COUNTERS HOOKED) ──────────────── -->
-<section class="section-sm">
-  <div class="container grid-4">
+  <footer>
+    <p>© 2026 Operion Systems Ltd. All rights reserved.</p>
+  </footer>
 
-    <div>
-      <div data-count="15">0</div>
-      <div>Enquiry Types</div>
-    </div>
-
-    <div>
-      <div data-count="4">0</div>
-      <div>AI Layers</div>
-    </div>
-
-    <div>
-      <div data-count="24">0</div>
-      <div>Always On</div>
-    </div>
-
-    <div>
-      <div data-count="100" data-suffix="%">0</div>
-      <div>Coverage</div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ── CTA ─────────────────────────────────────── -->
-<section class="section">
-  <div class="container" style="text-align:center">
-
-    <h2>Ready to automate your enquiries?</h2>
-
-    <a href="get-started.html" class="btn btn-primary btn-lg">
-      Get Started
-    </a>
-
-  </div>
-</section>
-
-<!-- ── FOOTER ─────────────────────────────────── -->
-<footer class="footer">
-  <div class="container">
-    <p>© 2025 Operion Systems Ltd</p>
-  </div>
-</footer>
-
-<!-- STRIPE -->
-<script src="https://js.stripe.com/v3/"></script>
-
-<!-- APP -->
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>
