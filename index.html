@@ -4,106 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Operion Systems Ltd</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ── NAVIGATION ─────────────────────────────────────────── -->
+  <!-- NAVIGATION -->
   <nav class="nav">
     <div class="nav-logo">
       <div class="nav-logo-mark">
-        <img src="logo.svg" alt="Operion Logo" width="24" height="24">
+        <img src="logo.svg" alt="Operion Systems Logo" width="28" height="28">
       </div>
-      OPERION SYSTEMS
+      Operion Systems
     </div>
     <div class="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="demo.html">Demo</a>
+      <a href="#demo" class="active">Demo</a>
+      <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-burger">&#9776;</button>
   </nav>
 
-  <!-- ── HERO SECTION ───────────────────────────────────────── -->
-  <section class="section section-hero">
+  <!-- HERO -->
+  <section class="section" id="hero">
     <div class="container">
-      <h1 class="display-1">Deterministic AI Orchestration</h1>
-      <p class="text-dim">Operion Systems Ltd delivers fully auditable, structured, and controlled AI-powered operational pipelines.</p>
-      <a href="demo.html" class="btn btn-primary">View Demo</a>
+      <h1 class="display-1">Operion Systems Ltd</h1>
+      <p class="text-dim">Deterministic AI operations for secure, auditable, and precise workflows.</p>
+      <a href="#demo" class="btn btn-primary">Request Demo</a>
     </div>
   </section>
 
-  <!-- ── DEMO SECTION ───────────────────────────────────────── -->
-  <section class="section section-demo" id="demo">
-    <div class="container">
-      <span class="section-label">Demo</span>
-      <div class="card demo-card">
-        <!-- Embed demo.html content inline -->
-        <iframe src="demo.html" frameborder="0" style="width:100%;height:600px;"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── CONTACT SECTION ────────────────────────────────────── -->
-  <section class="section section-sm" id="contact">
-    <div class="container">
-      <span class="section-label">Contact</span>
-      <h2 class="display-2">Get in Touch</h2>
-      <form>
+  <!-- DEMO FORM -->
+  <section class="section" id="demo">
+    <div class="container container-narrow">
+      <h2 class="display-2">Request a Demo</h2>
+      <form id="demo-form">
         <div class="form-group">
-          <label class="form-label">Name</label>
-          <input class="form-input" placeholder="Your Name">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" type="text" id="name" placeholder="John Doe" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Email</label>
-          <input class="form-input" placeholder="you@example.com">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" type="email" id="email" placeholder="email@example.com" required>
         </div>
         <div class="form-group">
-          <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="Type your message here"></textarea>
+          <label class="form-label" for="company">Company</label>
+          <input class="form-input" type="text" id="company" placeholder="Acme Ltd">
         </div>
-        <button type="submit" class="btn btn-primary">Send Message</button>
+        <button type="submit" class="btn btn-primary btn-lg">Submit Request</button>
+        <p class="form-hint" id="demo-success" style="display:none;">Your demo request has been submitted!</p>
       </form>
     </div>
   </section>
 
-  <!-- ── FOOTER ─────────────────────────────────────────────── -->
-  <footer class="footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="logo.svg" alt="Operion Logo" width="32" height="32">
-        <p>Operion Systems Ltd — Industrial AI orchestration. Global reach. Deterministic pipelines.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Products</h4>
-        <ul>
-          <li><a href="demo.html">Demo</a></li>
-          <li><a href="#">Core System</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Terms</a></li>
-        </ul>
-      </div>
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container container-narrow">
+      <h2 class="display-2">About Operion</h2>
+      <p class="text-dim">Operion is a deterministic, AI-orchestrated operations system designed to receive inputs, process them through structured logic, and produce controlled, auditable outputs.</p>
     </div>
-    <div class="container footer-bottom">
-      <p>&copy; 2026 Operion Systems Ltd. All rights reserved.</p>
-      <div class="footer-legal-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-    </div>
-  </footer>
+  </section>
 
   <script src="app.js"></script>
 </body>
