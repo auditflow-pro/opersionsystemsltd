@@ -1,15 +1,8 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: #050810;
-  color: #E0F7FF;
-  line-height: 1.6;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #050810;
+  color: #E0F7FA;
 }
 
 header {
@@ -17,81 +10,79 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #010417;
-  border-bottom: 1px solid #00E5FF33;
+  background-color: #01020a;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 header .logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+  height: 50px;
 }
 
-header .logo img {
-  width: 48px;
-  height: 48px;
-}
-
-header nav a.request-demo {
-  color: #00E5FF;
-  text-decoration: none;
-  font-weight: bold;
-  border: 1px solid #00E5FF;
+nav button {
+  background-color: #00E5FF;
+  color: #01020a;
+  border: none;
   padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
   border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
+  transition: 0.2s;
 }
 
-header nav a.request-demo:hover {
-  background: #00E5FF;
-  color: #010417;
-}
-
-main {
-  padding: 2rem;
+nav button:hover {
+  opacity: 0.85;
 }
 
 .hero {
   text-align: center;
-  margin-bottom: 3rem;
+  padding: 4rem 2rem;
 }
 
-.hero h2 {
-  font-size: 2.2rem;
-  color: #00E5FF;
+.hero h1 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  color: #B0F0FF;
+  font-size: 1.25rem;
 }
 
-.features {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
-.feature {
-  background: #010417;
-  border: 1px solid #00E5FF33;
+.demo-section {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: rgba(0, 229, 255, 0.05);
   border-radius: 8px;
-  padding: 1.5rem;
-  flex: 1 1 250px;
-  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.feature h3 {
-  color: #00E5FF;
-  margin-bottom: 0.5rem;
+.demo-section input,
+.demo-section textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: 1px solid #00E5FF;
+  background-color: #01020a;
+  color: #E0F7FA;
 }
 
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #010417;
-  border-top: 1px solid #00E5FF33;
-  color: #00E5FF99;
+.demo-section button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #00E5FF;
+  color: #01020a;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.demo-section button:hover {
+  opacity: 0.85;
+}
+
+.hidden {
+  display: none;
 }
