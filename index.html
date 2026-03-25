@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Operion Systems Ltd</title>
-  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
     </a>
     <div class="nav-links">
       <a href="#about" class="active">About</a>
-      <a href="demo.html">Demo</a>
+      <a href="#demo-section">Demo</a>
       <a href="#contact">Contact</a>
     </div>
     <button class="nav-burger">&#9776;</button>
@@ -34,21 +34,7 @@
   <section id="demo-section" class="section">
     <div class="container">
       <h2 class="display-2 text-cyan">Try the Operion Pipeline Demo</h2>
-      <form id="demo-form" class="form-group">
-        <label class="form-label" for="demo-input">Enter input data:</label>
-        <input type="text" id="demo-input" class="form-input" placeholder="Type your request..." required>
-        <button type="submit" class="btn btn-primary btn-lg">Submit Demo</button>
-        <p class="form-hint" id="demo-hint">Demo executes the Operion pipeline with deterministic output.</p>
-      </form>
-      <div id="demo-output" class="terminal" style="margin-top:20px; display:none;">
-        <div class="terminal-bar">
-          <span class="terminal-dot terminal-dot-red"></span>
-          <span class="terminal-dot terminal-dot-amber"></span>
-          <span class="terminal-dot terminal-dot-green"></span>
-          <span class="terminal-title">Operion Demo</span>
-        </div>
-        <pre id="demo-result" class="t-output"></pre>
-      </div>
+      <iframe src="demo.html" style="width:100%; height:600px; border:none;"></iframe>
     </div>
   </section>
 
@@ -62,7 +48,7 @@
       <div class="footer-col">
         <h4>Product</h4>
         <ul>
-          <li><a href="demo.html">Demo</a></li>
+          <li><a href="#demo-section">Demo</a></li>
           <li><a href="#about">About</a></li>
         </ul>
       </div>
