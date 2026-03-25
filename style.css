@@ -1,156 +1,97 @@
-<!-- =========================
-OPERION SYSTEMS — DEMO PACKAGE
-Includes:
-- demo.html
-- style.css (canonical)
-- logo.svg
-- favicon.svg
-========================= -->
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<!-- =========================
- demo.html
-========================= -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Operion Systems</title>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #050810;
+  color: #E0F7FF;
+  line-height: 1.6;
+}
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #010417;
+  border-bottom: 1px solid #00E5FF33;
+}
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
-  <!-- NAV -->
-  <nav class="nav">
-    <div class="nav-logo">
-      <img src="logo.svg" alt="Operion logo">
-      OPERION <span class="nav-logo-sys">SYSTEMS</span>
-    </div>
+header .logo img {
+  width: 48px;
+  height: 48px;
+}
 
-    <div class="nav-links">
-      <a href="#">Platform</a>
-      <a href="#">Architecture</a>
-      <a href="#">Security</a>
-      <a href="#">Docs</a>
-    </div>
+header nav a.request-demo {
+  color: #00E5FF;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid #00E5FF;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+}
 
-    <div class="nav-cta">
-      <button class="btn btn-ghost">Login</button>
-      <button class="btn btn-primary">Access System</button>
-    </div>
-  </nav>
+header nav a.request-demo:hover {
+  background: #00E5FF;
+  color: #010417;
+}
 
-  <!-- HERO -->
-  <section class="section">
-    <div class="container">
-      <div class="section-label">System Overview</div>
-      <h1 class="display-1">Operational clarity<br><span class="text-cyan">at system scale</span></h1>
-      <p class="text-dim" style="margin-top:16px; max-width:600px;">
-        Operion Systems provides structured visibility across complex environments. 
-        Designed for precision, built for control.
-      </p>
+main {
+  padding: 2rem;
+}
 
-      <div style="margin-top:24px; display:flex; gap:12px;">
-        <button class="btn btn-primary btn-lg">Launch Interface</button>
-        <button class="btn btn-outline btn-lg">View Documentation</button>
-      </div>
-    </div>
-  </section>
+.hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
 
-  <!-- CARDS -->
-  <section class="section-sm">
-    <div class="container grid-3">
-      <div class="card card-glow">
-        <div class="badge badge-cyan">Core</div>
-        <h3 class="display-3" style="margin-top:10px;">System Mapping</h3>
-        <p class="text-dim">Real-time visibility across all operational layers.</p>
-      </div>
+.hero h2 {
+  font-size: 2.2rem;
+  color: #00E5FF;
+  margin-bottom: 1rem;
+}
 
-      <div class="card card-glow">
-        <div class="badge badge-green">Stable</div>
-        <h3 class="display-3" style="margin-top:10px;">Process Control</h3>
-        <p class="text-dim">Deterministic execution with zero ambiguity.</p>
-      </div>
+.hero p {
+  font-size: 1.2rem;
+  color: #B0F0FF;
+}
 
-      <div class="card card-glow">
-        <div class="badge badge-amber">Adaptive</div>
-        <h3 class="display-3" style="margin-top:10px;">Signal Intelligence</h3>
-        <p class="text-dim">Structured data interpretation at scale.</p>
-      </div>
-    </div>
-  </section>
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-  <!-- TERMINAL -->
-  <section class="section-sm">
-    <div class="container">
-      <div class="terminal">
-        <div class="terminal-bar">
-          <div class="terminal-dot terminal-dot-red"></div>
-          <div class="terminal-dot terminal-dot-amber"></div>
-          <div class="terminal-dot terminal-dot-green"></div>
-          <div class="terminal-title">operion.system</div>
-        </div>
-        <div>
-          <span class="t-prompt">$</span> <span class="t-cmd">init system</span><br>
-          <span class="t-output">loading modules...</span><br>
-          <span class="t-success">✓ system online</span>
-        </div>
-      </div>
-    </div>
-  </section>
+.feature {
+  background: #010417;
+  border: 1px solid #00E5FF33;
+  border-radius: 8px;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  text-align: center;
+}
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-bottom">
-      <p>© 2026 Operion Systems Ltd</p>
-      <div class="footer-legal-links">
-        <a href="#">Privacy</a>
-        <a href="#">Terms</a>
-      </div>
-    </div>
-  </footer>
+.feature h3 {
+  color: #00E5FF;
+  margin-bottom: 0.5rem;
+}
 
-</body>
-</html>
-
-
-<!-- =========================
- style.css (minimal reference hook)
- NOTE: Replace with your full stylesheet
-========================= -->
-
-/* Import your full stylesheet here */
-@import url('./operion-full.css');
-
-
-<!-- =========================
- logo.svg
-========================= -->
-
-<!-- Save as logo.svg -->
-<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#00e5ff"/>
-      <stop offset="100%" stop-color="#00b8cc"/>
-    </linearGradient>
-  </defs>
-  <rect x="8" y="8" width="48" height="48" rx="10" fill="none" stroke="url(#g)" stroke-width="2"/>
-  <path d="M20 40 L32 20 L44 40" stroke="url(#g)" stroke-width="2" fill="none" stroke-linecap="round"/>
-</svg>
-
-
-<!-- =========================
- favicon.svg
-========================= -->
-
-<!-- Save as favicon.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#050810"/>
-  <path d="M20 40 L32 20 L44 40" stroke="#00e5ff" stroke-width="3" fill="none" stroke-linecap="round"/>
-</svg>
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #010417;
+  border-top: 1px solid #00E5FF33;
+  color: #00E5FF99;
+}
