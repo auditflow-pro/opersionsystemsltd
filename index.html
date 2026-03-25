@@ -4,34 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Operion Systems Ltd</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="logo.svg" alt="Operion Systems Logo" class="logo">
     <nav>
-      <button id="openDemoForm">Request Demo</button>
+      <img src="logo.svg" alt="Operion Systems Logo" class="logo">
+      <ul>
+        <li><a href="demo.html">Request Demo</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Deterministic AI Orchestrated Operations</h1>
-      <p>Operion: Streamline enquiries, automate workflows, and stay in control.</p>
+      <h1>Welcome to Operion</h1>
+      <p>Deterministic AI-powered operations system.</p>
+      <a href="demo.html" class="cta-button">Request a Demo</a>
     </section>
 
-    <section id="demoSection" class="demo-section hidden">
-      <h2>Request a Demo</h2>
-      <form id="requestDemoForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="details" placeholder="Brief Description" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-      <p id="formStatus"></p>
+    <section class="features">
+      <div class="feature">
+        <h2>Deterministic Pipelines</h2>
+        <p>Controlled and auditable logic flows for all inputs.</p>
+      </div>
+      <div class="feature">
+        <h2>Modular Architecture</h2>
+        <p>Flexible integration with multi-tenant credentials and HIVE Mind layer.</p>
+      </div>
+      <div class="feature">
+        <h2>Guardian Protection</h2>
+        <p>External threat mitigation built into the core system.</p>
+      </div>
     </section>
   </main>
+
+  <footer>
+    <p>&copy; 2026 Operion Systems Ltd</p>
+  </footer>
 
   <script src="app.js"></script>
 </body>
