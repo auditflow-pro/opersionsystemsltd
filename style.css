@@ -1,64 +1,30 @@
-/* ================================================================
-   OPERION SYSTEMS LTD — Global Stylesheet
-   Dark tech precision, cyan accents, Syne Display + DM Mono
-   ================================================================ */
+/* ── Canonical Operion Systems Ltd Style.css ── */
 
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap');
-
-:root {
-  --black:#050810; --deep:#080d1a; --surface:#0d1426; --border:#1a2540;
-  --cyan:#00e5ff; --cyan-dim:#00b8cc; --cyan-glow:rgba(0,229,255,0.12);
-  --white:#f0f4ff; --white-dim:#8a9bbf; --radius:6px;
-  --font-display:'Syne',sans-serif; --font-body:'DM Sans',sans-serif;
-  --font-mono:'DM Mono',monospace; --transition:200ms cubic-bezier(0.4,0,0.2,1);
+/* RESET & BASE */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* RESET */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;font-size:16px;}
-body{background:var(--black);color:var(--white);font-family:var(--font-body);line-height:1.6;min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-img{max-width:100%;display:block;}
-a{color:var(--cyan);text-decoration:none;transition:color var(--transition);}
-a:hover{color:var(--white);}
+html {
+  scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+}
 
-/* NAV */
-.nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;background:rgba(5,8,16,0.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
-.nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-weight:800;font-size:1.1rem;color:var(--white);text-transform:uppercase;}
-.nav-logo-mark{width:28px;height:28px;}
-.nav-links{display:flex;align-items:center;gap:2rem;}
-.nav-links a{font-size:0.85rem;font-weight:400;color:var(--white-dim);letter-spacing:0.03em;text-transform:uppercase;transition:color var(--transition);}
-.nav-links a:hover{color:var(--white);}
-.nav-links a.active{color:var(--cyan);}
-.nav-burger{display:none;background:none;border:none;color:var(--white);font-size:1.4rem;}
+body {
+  color: #111;
+  background-color: #fefefe;
+  font-size: 16px;
+}
 
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 24px;font-family:var(--font-display);font-weight:600;font-size:0.85rem;text-transform:uppercase;border-radius:var(--radius);border:none;transition:all var(--transition);}
-.btn-primary{background:var(--cyan);color:var(--black);}
-.btn-primary:hover{background:var(--white);color:var(--black);transform:translateY(-1px);box-shadow:0 8px 24px rgba(0,229,255,0.3);}
-.btn-lg{padding:14px 32px;font-size:0.9rem;}
-
-/* CONTAINERS */
-.container{max-width:1200px;margin:0 auto;padding:0 2rem;}
-.section{padding:100px 0;}
-.display-1{font-size:clamp(2.8rem,6vw,5rem);font-weight:800;letter-spacing:-0.02em;}
-.display-2{font-size:clamp(2rem,4vw,3.2rem);font-weight:700;letter-spacing:-0.02em;}
-.text-cyan{color:var(--cyan);}
-.text-dim{color:var(--white-dim);}
-
-/* FORM / TERMINAL */
-.form-group{display:flex;flex-direction:column;gap:6px;}
-.form-label{font-family:var(--font-mono);font-size:0.75rem;font-weight:500;color:var(--white-dim);text-transform:uppercase;}
-.form-input{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);color:var(--white);font-family:var(--font-body);padding:11px 16px;width:100%;}
-.terminal{background:#010408;border:1px solid var(--border);border-radius:var(--radius);padding:1rem;font-family:var(--font-mono);font-size:0.82rem;line-height:1.7;overflow-x:auto;}
-
-/* FOOTER */
-.footer{background:var(--deep);border-top:1px solid var(--border);padding:64px 0 32px;}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;}
-.footer-col h4{font-family:var(--font-mono);font-size:0.72rem;font-weight:500;color:var(--white-dim);text-transform:uppercase;margin-bottom:1rem;}
-.footer-col ul{display:flex;flex-direction:column;gap:10px;}
-.footer-col ul li a{font-size:0.88rem;color:var(--white-faint);transition:color var(--transition);}
-.footer-col ul li a:hover{color:var(--white);}
-
-/* MOBILE */
-@media(max-width:768px){.nav-links{display:none;}.nav-burger{display:block;}.nav-links.open{display:flex;flex-direction:column;position:fixed;top:64px;left:0;right:0;background:var(--deep);border-bottom:1px solid var(--border);padding:1.5rem 2rem;gap:1.2rem;}.section{padding:64px 0;}}
-@media(max-width:480px){.container{padding:0 1.25rem;}}
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+ 
