@@ -8,111 +8,95 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ── NAVIGATION ── -->
+  <!-- ── NAVIGATION ─────────────────────────────────────────── -->
   <nav class="nav">
     <div class="nav-logo">
-      <img src="logo.svg" alt="Operion Logo" class="nav-logo-mark">
-      <span>Operion Systems</span>
+      <div class="nav-logo-mark">
+        <img src="logo.svg" alt="Operion Logo" width="24" height="24">
+      </div>
+      OPERION SYSTEMS
     </div>
     <div class="nav-links">
-      <a href="#about" class="active">About</a>
-      <a href="#features">Features</a>
+      <a href="index.html" class="active">Home</a>
+      <a href="demo.html">Demo</a>
       <a href="#contact">Contact</a>
-      <a href="demo.html" class="btn btn-outline">Demo</a>
     </div>
-    <button class="nav-burger">☰</button>
+    <button class="nav-burger">&#9776;</button>
   </nav>
 
-  <!-- ── HERO SECTION ── -->
-  <section id="hero" class="section">
+  <!-- ── HERO SECTION ───────────────────────────────────────── -->
+  <section class="section section-hero">
     <div class="container">
-      <h1 class="display-1">Operion: Deterministic AI Orchestration</h1>
-      <p class="text-dim">Receive inputs, process them through structured logic, and produce auditable outputs.</p>
-      <a href="demo.html" class="btn btn-primary">Launch Demo</a>
+      <h1 class="display-1">Deterministic AI Orchestration</h1>
+      <p class="text-dim">Operion Systems Ltd delivers fully auditable, structured, and controlled AI-powered operational pipelines.</p>
+      <a href="demo.html" class="btn btn-primary">View Demo</a>
     </div>
   </section>
 
-  <!-- ── ABOUT SECTION ── -->
-  <section id="about" class="section section-sm">
+  <!-- ── DEMO SECTION ───────────────────────────────────────── -->
+  <section class="section section-demo" id="demo">
     <div class="container">
-      <span class="section-label">About Operion</span>
-      <h2 class="display-2">Industrial intelligence. Global precision.</h2>
-      <p class="text-dim">Operion is built for modular, deterministic, AI-orchestrated operations with full traceability and auditable pipelines.</p>
-    </div>
-  </section>
-
-  <!-- ── FEATURES SECTION ── -->
-  <section id="features" class="section section-sm">
-    <div class="container grid-3">
-      <div class="card card-glow">
-        <h3>Deterministic Execution</h3>
-        <p class="text-dim">No uncontrolled branching, modular pipelines ensure predictable outputs.</p>
-      </div>
-      <div class="card card-glow">
-        <h3>AI Orchestrated</h3>
-        <p class="text-dim">Inputs are intelligently routed, processed, and output in structured flows.</p>
-      </div>
-      <div class="card card-glow">
-        <h3>Auditable</h3>
-        <p class="text-dim">Every action is traceable and fully auditable for compliance and operational clarity.</p>
+      <span class="section-label">Demo</span>
+      <div class="card demo-card">
+        <!-- Embed demo.html content inline -->
+        <iframe src="demo.html" frameborder="0" style="width:100%;height:600px;"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ── CONTACT SECTION ── -->
-  <section id="contact" class="section section-sm">
+  <!-- ── CONTACT SECTION ────────────────────────────────────── -->
+  <section class="section section-sm" id="contact">
     <div class="container">
-      <span class="section-label">Get in Touch</span>
-      <h2 class="display-2">Talk to Operion</h2>
+      <span class="section-label">Contact</span>
+      <h2 class="display-2">Get in Touch</h2>
       <form>
         <div class="form-group">
-          <label class="form-label" for="name">Name</label>
-          <input type="text" id="name" class="form-input" placeholder="Your Name">
+          <label class="form-label">Name</label>
+          <input class="form-input" placeholder="Your Name">
         </div>
         <div class="form-group">
-          <label class="form-label" for="email">Email</label>
-          <input type="email" id="email" class="form-input" placeholder="you@example.com">
+          <label class="form-label">Email</label>
+          <input class="form-input" placeholder="you@example.com">
         </div>
         <div class="form-group">
-          <label class="form-label" for="message">Message</label>
-          <textarea id="message" class="form-textarea" placeholder="Your message..."></textarea>
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Type your message here"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
+  <!-- ── FOOTER ─────────────────────────────────────────────── -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">
-        <img src="logo.svg" alt="Operion Logo" width="36">
-        <p>Operion Systems Ltd — Deterministic AI Orchestration for global operations.</p>
+        <img src="logo.svg" alt="Operion Logo" width="32" height="32">
+        <p>Operion Systems Ltd — Industrial AI orchestration. Global reach. Deterministic pipelines.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <ul>
+          <li><a href="demo.html">Demo</a></li>
+          <li><a href="#">Core System</a></li>
+        </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#features">Features</a></li>
+          <li><a href="#">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
         <ul>
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Privacy</a></li>
           <li><a href="#">Terms</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Follow</h4>
-        <ul>
-          <li><a href="#">GitHub</a></li>
-          <li><a href="#">LinkedIn</a></li>
-        </ul>
-      </div>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <p>&copy; 2026 Operion Systems Ltd. All rights reserved.</p>
       <div class="footer-legal-links">
         <a href="#">Privacy</a>
