@@ -1,57 +1,156 @@
-/* Operion Systems Dark Technical Stylesheet */
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono&display=swap');
+<!-- =========================
+OPERION SYSTEMS — DEMO PACKAGE
+Includes:
+- demo.html
+- style.css (canonical)
+- logo.svg
+- favicon.svg
+========================= -->
 
-:root {
-  --black: #050810;
-  --cyan: #00e5ff;
-  --white: #f0f4ff;
-  --white-dim: #8a9bbf;
-  --surface: #0d1426;
-  --border: #1a2540;
-  --radius: 6px;
-  --transition: 200ms cubic-bezier(0.4,0,0.2,1);
-  --shadow: 0 4px 24px rgba(0,0,0,0.4);
-}
+<!-- =========================
+ demo.html
+========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operion Systems</title>
 
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: 'DM Mono', monospace;
-  line-height: 1.6;
-  margin: 0;
-}
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-a { color: var(--cyan); text-decoration: none; }
-a:hover { color: var(--white); }
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.nav {
-  position: fixed; top:0; left:0; right:0;
-  display:flex; align-items:center; justify-content:space-between;
-  height:64px; padding:0 2rem; background: rgba(5,8,16,0.85); backdrop-filter: blur(20px); border-bottom:1px solid var(--border);
-}
-.nav-logo { display:flex; align-items:center; gap:10px; font-family:'Syne',sans-serif; font-weight:800; color: var(--white); text-transform:uppercase; }
-.nav-logo-mark img { display:block; }
-.nav-links { display:flex; align-items:center; gap:2rem; }
-.nav-links a { font-size:0.85rem; font-weight:400; color: var(--white-dim); text-transform:uppercase; }
-.nav-links a:hover { color: var(--white); }
-.nav-burger { display:none; background:none; border:none; color: var(--white); font-size:1.4rem; }
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="logo.svg" alt="Operion logo">
+      OPERION <span class="nav-logo-sys">SYSTEMS</span>
+    </div>
 
-.section { padding:100px 0; }
-.container { max-width:1200px; margin:0 auto; padding:0 2rem; }
-.container-narrow { max-width:800px; margin:0 auto; padding:0 2rem; }
+    <div class="nav-links">
+      <a href="#">Platform</a>
+      <a href="#">Architecture</a>
+      <a href="#">Security</a>
+      <a href="#">Docs</a>
+    </div>
 
-.btn { display:inline-flex; align-items:center; gap:8px; padding:10px 24px; font-family:'Syne',sans-serif; font-weight:600; text-transform:uppercase; border-radius:var(--radius); border:none; transition:all var(--transition); }
-.btn-primary { background:var(--cyan); color: var(--black); }
-.btn-primary:hover { background: var(--white); color:var(--black); transform: translateY(-1px); box-shadow: var(--shadow); }
+    <div class="nav-cta">
+      <button class="btn btn-ghost">Login</button>
+      <button class="btn btn-primary">Access System</button>
+    </div>
+  </nav>
 
-.form-group { display:flex; flex-direction:column; gap:6px; margin-bottom:1rem; }
-.form-label { font-size:0.75rem; color: var(--white-dim); text-transform:uppercase; }
-.form-input { background: var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:10px; color: var(--white); }
-.form-input:focus { outline:none; border-color: var(--cyan); box-shadow:0 0 0 3px rgba(0,229,255,0.12); }
-.form-hint { font-size:0.8rem; color: var(--cyan); margin-top:0.5rem; }
+  <!-- HERO -->
+  <section class="section">
+    <div class="container">
+      <div class="section-label">System Overview</div>
+      <h1 class="display-1">Operational clarity<br><span class="text-cyan">at system scale</span></h1>
+      <p class="text-dim" style="margin-top:16px; max-width:600px;">
+        Operion Systems provides structured visibility across complex environments. 
+        Designed for precision, built for control.
+      </p>
 
-/* RESPONSIVE */
-@media (max-width:768px) {
-  .nav-links { display:none; }
-  .nav-burger { display:block; }
-}
+      <div style="margin-top:24px; display:flex; gap:12px;">
+        <button class="btn btn-primary btn-lg">Launch Interface</button>
+        <button class="btn btn-outline btn-lg">View Documentation</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CARDS -->
+  <section class="section-sm">
+    <div class="container grid-3">
+      <div class="card card-glow">
+        <div class="badge badge-cyan">Core</div>
+        <h3 class="display-3" style="margin-top:10px;">System Mapping</h3>
+        <p class="text-dim">Real-time visibility across all operational layers.</p>
+      </div>
+
+      <div class="card card-glow">
+        <div class="badge badge-green">Stable</div>
+        <h3 class="display-3" style="margin-top:10px;">Process Control</h3>
+        <p class="text-dim">Deterministic execution with zero ambiguity.</p>
+      </div>
+
+      <div class="card card-glow">
+        <div class="badge badge-amber">Adaptive</div>
+        <h3 class="display-3" style="margin-top:10px;">Signal Intelligence</h3>
+        <p class="text-dim">Structured data interpretation at scale.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMINAL -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="terminal-dot terminal-dot-red"></div>
+          <div class="terminal-dot terminal-dot-amber"></div>
+          <div class="terminal-dot terminal-dot-green"></div>
+          <div class="terminal-title">operion.system</div>
+        </div>
+        <div>
+          <span class="t-prompt">$</span> <span class="t-cmd">init system</span><br>
+          <span class="t-output">loading modules...</span><br>
+          <span class="t-success">✓ system online</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-bottom">
+      <p>© 2026 Operion Systems Ltd</p>
+      <div class="footer-legal-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+<!-- =========================
+ style.css (minimal reference hook)
+ NOTE: Replace with your full stylesheet
+========================= -->
+
+/* Import your full stylesheet here */
+@import url('./operion-full.css');
+
+
+<!-- =========================
+ logo.svg
+========================= -->
+
+<!-- Save as logo.svg -->
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#00b8cc"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="10" fill="none" stroke="url(#g)" stroke-width="2"/>
+  <path d="M20 40 L32 20 L44 40" stroke="url(#g)" stroke-width="2" fill="none" stroke-linecap="round"/>
+</svg>
+
+
+<!-- =========================
+ favicon.svg
+========================= -->
+
+<!-- Save as favicon.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#050810"/>
+  <path d="M20 40 L32 20 L44 40" stroke="#00e5ff" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
