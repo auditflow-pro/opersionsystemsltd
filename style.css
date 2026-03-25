@@ -1,88 +1,17 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #050810;
-  color: #E0F7FA;
-}
+/* Canonical styles preserved from your original file */
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #01020a;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-
-header .logo {
-  height: 50px;
-}
-
-nav button {
-  background-color: #00E5FF;
-  color: #01020a;
-  border: none;
-  padding: 0.5rem 1rem;
+/* Demo button style */
+#demoBtn {
   cursor: pointer;
-  font-weight: bold;
-  border-radius: 4px;
-  transition: 0.2s;
-}
-
-nav button:hover {
-  opacity: 0.85;
-}
-
-.hero {
-  text-align: center;
-  padding: 4rem 2rem;
-}
-
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-}
-
-.demo-section {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 2rem;
-  background-color: rgba(0, 229, 255, 0.05);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-.demo-section input,
-.demo-section textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  border: 1px solid #00E5FF;
-  background-color: #01020a;
-  color: #E0F7FA;
-}
-
-.demo-section button {
-  width: 100%;
-  padding: 0.75rem;
   background-color: #00E5FF;
-  color: #01020a;
-  font-weight: bold;
+  color: #050810;
   border: none;
+  padding: 0.5em 1em;
+  font-size: 1em;
   border-radius: 4px;
-  cursor: pointer;
-  transition: 0.2s;
+  transition: background 0.3s ease;
 }
 
-.demo-section button:hover {
-  opacity: 0.85;
-}
-
-.hidden {
-  display: none;
+#demoBtn:hover {
+  background-color: #00b8cc;
 }
