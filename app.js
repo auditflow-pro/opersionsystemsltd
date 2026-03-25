@@ -1,41 +1,32 @@
-// Elements
-const demoForm = document.getElementById('requestDemoForm');
-const formStatus = document.getElementById('formStatus');
-const demoSection = document.getElementById('demoSection');
-const openDemoBtn = document.getElementById('openDemoForm');
+// NAVIGATION BURGER TOGGLE
+const burger = document.querySelector('.nav-burger');
+const navLinks = document.querySelector('.nav-links');
 
-// NGROK n8n webhook endpoint
-const N8N_WEBHOOK = "https://your-ngrok-url.ngrok.io/orchestrator";
-
-// Show demo section when button clicked
-openDemoBtn.addEventListener('click', () => {
-  demoSection.classList.toggle('hidden');
-  demoSection.scrollIntoView({ behavior: 'smooth' });
+burger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
 });
 
-// Handle form submission
-demoForm.addEventListener('submit', async (e) => {
+// DEMO FORM HANDLER
+const demoForm = document.getElementById('demo-form');
+const demoInput = document.getElementById('demo-input');
+const demoOutput = document.getElementById('demo-output');
+const demoResult = document.getElementById('demo-result');
+
+demoForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  formStatus.textContent = "Submitting...";
-  
-  const formData = new FormData(demoForm);
-  const payload = Object.fromEntries(formData.entries());
+  const input = demoInput.value.trim();
+  if (!input) return;
 
-  try {
-    const response = await fetch(N8N_WEBHOOK, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
+  demoResult.textContent = "Processing Operion pipeline...";
+  demoOutput.style.display = 'block';
 
-    if (response.ok) {
-      formStatus.textContent = "Demo request submitted successfully.";
-      demoForm.reset();
-    } else {
-      formStatus.textContent = "Error submitting demo. Try again.";
-    }
-  } catch (err) {
-    formStatus.textContent = "Network error. Check connection.";
-    console.error(err);
-  }
+  // Simulate deterministic output for demo
+  setTimeout(() => {
+    demoResult.innerHTML = `
+&gt; Input: ${input}
+&gt; Status: ✅ Processed
+&gt; Output: Operion deterministic result for "${input}"
+    `;
+    demoInput.value = '';
+  }, 700);
 });
