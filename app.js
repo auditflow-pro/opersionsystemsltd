@@ -273,7 +273,7 @@ function initDemoForm() {
       showAlert(responseEl, 'Thank you. We\'ve received your request and will be in touch within one business day.', 'success');
       form.reset();
     } else {
-      showAlert(responseEl, 'Something went wrong. Please email us directly at operionautomation@gmail.com', 'error');
+      showAlert(responseEl, 'Something went wrong. Please email us directly at hello@operionsystems.com', 'error');
     }
   });
 }
